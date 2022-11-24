@@ -3,6 +3,7 @@ import joblib
 from flask import Flask, request, render_template, jsonify
 app = Flask(__name__)
 loaded_model= joblib.load('model_rf_best.pkl')
+loaded_model1= joblib.load('regr.pkl')
 
 @app.route('/')
 def home():
