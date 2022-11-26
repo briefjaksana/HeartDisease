@@ -17,21 +17,21 @@
 
     <!-- Main Input For Receiving Query to ML -->
     <form action="{{ url_for('predict')}}"method="post">
-        <input type="text" name="age" placeholder="Age" required="required" />
-        <input type="text" name="RestingBP" placeholder="RestingBP" required="required" />
-        <input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" />
-        <input type="text" name="FastingBS" placeholder="FastingBS" required="required" />
-        <input type="text" name="MaxHR" placeholder="MaxHR" required="required" />
-        <input type="text" name="Oldpeak" placeholder="Oldpeak" required="required" />
-        <input type="text" name="Gender" placeholder="male=1/female=0" required="required" />
-        <input type="text" name="ChestPainType_ATA" placeholder="ATA" required="required" />
-        <input type="text" name="ChestPainType_NAP" placeholder="NAP" required="required" />
-        <input type="text" name="ChestPainType_TA" placeholder="TA" required="required" />
-        <input type="text" name="RestingECG_Normal" placeholder="Normal" required="required" />
-        <input type="text" name="RestingECG_ST" placeholder="ST" required="required" />
-        <input type="text" name="ExerciseAngina" placeholder="ExerciseAngina(Y=1/N=0)" required="required" />
-        <input type="text" name="ST_Slope_Flat" placeholder="Flat" required="required" />
-        <input type="text" name="ST_Slope_Up" placeholder="Up" required="required" />
+        <input type="text" step=any name="age" placeholder="Age" required="required" />
+        <input type="text" step=any name="RestingBP" placeholder="RestingBP" required="required" />
+        <input type="text" step=any name="Cholesterol" placeholder="Cholesterol" required="required" />
+        <input type="text" step=any name="FastingBS" placeholder="FastingBS" required="required" />
+        <input type="text" step=any name="MaxHR" placeholder="MaxHR" required="required" />
+        <input type="text" step=any name="Oldpeak" placeholder="Oldpeak" required="required" />
+        <input type="text" step=any name="Gender" placeholder="male=1/female=0" required="required" />
+        <input type="text" step=any name="ChestPainType_ATA" placeholder="ATA" required="required" />
+        <input type="text" step=any name="ChestPainType_NAP" placeholder="NAP" required="required" />
+        <input type="text" step=any name="ChestPainType_TA" placeholder="TA" required="required" />
+        <input type="text" step=any name="RestingECG_Normal" placeholder="Normal" required="required" />
+        <input type="text" step=any name="RestingECG_ST" placeholder="ST" required="required" />
+        <input type="text" step=any name="ExerciseAngina" placeholder="ExerciseAngina(Y=1/N=0)" required="required" />
+        <input type="text" step=any name="ST_Slope_Flat" placeholder="Flat" required="required" />
+        <input type="text" step=any name="ST_Slope_Up" placeholder="Up" required="required" />
         
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
