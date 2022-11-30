@@ -44,10 +44,18 @@
     <h2>keterangan :</h2>
     <h3>keterangan :</h3>
     <form action="{{ url_for('predict1')}}"method="post">
-        <input type="text" name="GarageArea" placeholder="GarageArea" required="required" />
-        <input type="text" name="OverallQual" placeholder="OverallQual" required="required" />
-        <input type="text" name="GrLivArea" placeholder="GrLivArea" required="required" />
-        
+        <input type="text" step=any name="GarageArea" placeholder="GarageArea" required="required" />
+        <input type="text" step=any name="OverallQual" placeholder="OverallQual" required="required" />
+        <input type="text" step=any name="GrLivArea" placeholder="GrLivArea" required="required" />
+        <input type="text" step=any name="YearRemodAdd" placeholder="YearRemodAdd" required="required" />
+        <input type="text" step=any name="YearBuilt" placeholder="YearBuilt" required="required" />
+        <input type="text" step=any name="TotRmsAbvGrd" placeholder="TotRmsAbvGrd" required="required" />
+        <input type="text" step=any name="FullBath" placeholder="FullBath" required="required" />
+        <input type="text" step=any name="1stFlrSF" placeholder="1stFlrSF" required="required" />
+        <input type="text" step=any name="TotalBsmtSF" placeholder="TotalBsmtSF" required="required" />
+        <input type="text" step=any name="GarageCars" placeholder="GarageCars" required="required" />
+        <input type="text" step=any name="2ndFlrSF" placeholder="2ndFlrSF" required="required" /> 
+     
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
     <br>
