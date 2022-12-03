@@ -1,38 +1,36 @@
 <html >
 <head>
   <title>Heart Disease and house price Prediction</title>
-
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 <div class="login">
     <h1>Heart Disease Prediction</h1>
     <h2>keterangan:</h2>
-    <h3>1 = Ya</h3>
-    <h3>0 = Tidak</h3>
-    <h3>isi kolom dibawah ini dengan 1 atau 0</h3>
-    <h4>Chest Pain Type : ATA, NAP, TA</h4>
-    <h4>Resting : Normal, ST</h4> 
-    <h4>ST Slope : Flat, Up</h4>
+    <h4>Chest Pain Type : ATA, NAP, TA, ASY</h4>
+    <h4>RestingECG : Normal, ST, LVH</h4>
+    <h4>ST Slope : Flat, Up, Down</h4>
 
-    <!-- Main Input For Receiving Query to ML -->
+     <!-- Main Input For Receiving Query to heart disease prediction -->
     <form action="{{ url_for('predict')}}"method="post">
-        <input type="text" step=any name="age" placeholder="Age" required="required" />
+        <input type="text" step=any name="Age" placeholder="Age" required="required" />
         <input type="text" step=any name="RestingBP" placeholder="RestingBP" required="required" />
         <input type="text" step=any name="Cholesterol" placeholder="Cholesterol" required="required" />
         <input type="text" step=any name="FastingBS" placeholder="FastingBS" required="required" />
         <input type="text" step=any name="MaxHR" placeholder="MaxHR" required="required" />
         <input type="text" step=any name="Oldpeak" placeholder="Oldpeak" required="required" />
-        <input type="text" step=any name="Gender" placeholder="male=1/female=0" required="required" />
-        <input type="text" step=any name="ChestPainType_ATA" placeholder="ATA" required="required" />
-        <input type="text" step=any name="ChestPainType_NAP" placeholder="NAP" required="required" />
-        <input type="text" step=any name="ChestPainType_TA" placeholder="TA" required="required" />
-        <input type="text" step=any name="RestingECG_Normal" placeholder="Normal" required="required" />
-        <input type="text" step=any name="RestingECG_ST" placeholder="ST" required="required" />
-        <input type="text" step=any name="ExerciseAngina" placeholder="ExerciseAngina(Y=1/N=0)" required="required" />
-        <input type="text" step=any name="ST_Slope_Flat" placeholder="Flat" required="required" />
-        <input type="text" step=any name="ST_Slope_Up" placeholder="Up" required="required" />
-        
+        <input type="text" name="Sex" placeholder="Sex : M/F" required="required" />
+        <input type="text" name="ChestPainType" placeholder="ChestPainType" required="required" />
+        <input type="text" name="RestingECG" placeholder="RestingECG" required="required" />
+        <input type="text" name="ExerciseAngina" placeholder="ExerciseAngina : Y/N" required="required" />
+        <input type="text" name="ST_Slope" placeholder="ST Slope" required="required" />
+
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
@@ -42,7 +40,8 @@
 
     <h1>house price prediction</h1>
     <h2>keterangan :</h2>
-    <h3>keterangan :</h3>
+    <h3></h3>
+    <!-- Main Input For Receiving Query to House Prices prediction -->
     <form action="{{ url_for('predict1')}}"method="post">
         <input type="text" step=any name="GarageArea" placeholder="GarageArea" required="required" />
         <input type="text" step=any name="OverallQual" placeholder="OverallQual" required="required" />
@@ -54,12 +53,13 @@
         <input type="text" step=any name="1stFlrSF" placeholder="1stFlrSF" required="required" />
         <input type="text" step=any name="TotalBsmtSF" placeholder="TotalBsmtSF" required="required" />
         <input type="text" step=any name="GarageCars" placeholder="GarageCars" required="required" />
-        <input type="text" step=any name="2ndFlrSF" placeholder="2ndFlrSF" required="required" /> 
-     
+        <input type="text" step=any name="2ndFlrSF" placeholder="2ndFlrSF" required="required" />
+
+
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-    <br>
-    <br>
+      <br>
+   <br>
    {{ prediction1_text }}
  </div>
 
